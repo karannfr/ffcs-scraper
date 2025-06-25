@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Course Data Scraper",
+  "version": "1.0",
+  "description": "Scrapes course data from tables and formats as JavaScript objects",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Course Data Scraper"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

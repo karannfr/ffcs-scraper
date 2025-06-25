@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    
+    h3 {
+      margin: 0 0 15px 0;
+      color: #333;
+    }
+    
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 14px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    button:hover {
+      background: #45a049;
+    }
+    
+    button:disabled {
+      background: #cccccc;
+      cursor: not-allowed;
+    }
+    
+    #output {
+      border: 1px solid #ddd;
+      padding: 10px;
+      background: #f9f9f9;
+      font-family: monospace;
+      font-size: 12px;
+      max-height: 300px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      margin-top: 10px;
+      display: none;
+    }
+    
+    #copyBtn {
+      background: #2196F3;
+      display: none;
+    }
+    
+    #copyBtn:hover {
+      background: #1976D2;
+    }
+    
+    .status {
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      display: none;
+    }
+    
+    .status.success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .status.error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    
+    .instructions {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <h3>Course Data Scraper</h3>
+  
+  <div class="instructions">
+    Navigate to the course listing page and click "Scrape Course Data" to extract all course information from the tables.
+  </div>
+  
+  <button id="scrapeBtn">Scrape Course Data</button>
+  <button id="copyBtn">Copy to Clipboard</button>
+  
+  <div id="status" class="status"></div>
+  <div id="output"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
